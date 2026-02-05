@@ -6,4 +6,4 @@ def calcurator(a,b):
 
 a, b = map(int, input().split())
 result_1,result_2 = calcurator(a,b)
-print(result_1,resul)
+print(result_1,result_2)
