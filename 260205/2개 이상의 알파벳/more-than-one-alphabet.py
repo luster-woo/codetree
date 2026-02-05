@@ -9,4 +9,4 @@ for ch in A:
 if len(dic)>=2:
     print("Yes")
 else:
-    print("N")
+    print("No")
