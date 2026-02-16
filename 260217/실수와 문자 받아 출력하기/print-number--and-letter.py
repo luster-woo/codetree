@@ -1,6 +1,8 @@
 c = input()
 print(c)
 a = input()
+a = float(a)
 b = input()
+b = float(b)
 print(f'{a:0.2f}')
 print(f'{b:0.2f}')
