@@ -1,0 +1,6 @@
+c = input()
+print(c)
+a = input()
+b = input()
+print(f'{a:0.2f}')
+print(f'{b:0.2f}')
