@@ -1,2 +1,2 @@
 a = input()
-print(a.split("-"))
+print(''.join(a.split("-")))
