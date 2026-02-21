@@ -7,5 +7,7 @@ elif a=="B":
     print("Good")
 elif a=="C":
     print("Usually")
-else:
+elif a=="D":
     print("Effort")
+else:
+    print("Failure")
