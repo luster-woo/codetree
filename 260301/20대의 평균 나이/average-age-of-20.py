@@ -1,13 +1,13 @@
 cnt = 0
-result = 0
+total = 0
 
 while True:
     a = int(input())
-    if a >= 30:
-        if cnt == 0:
-            print("0.00")
-        else:
-            print(f'{result/cnt:0.2f}')
+    
+    if 20 <= a < 30:
+        cnt += 1
+        total += a
+    else:
         break
-    cnt += 1
-    result += a
+
+print(f"{total/cnt:.2f}")
