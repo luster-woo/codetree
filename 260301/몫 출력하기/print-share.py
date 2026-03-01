@@ -1,16 +1,11 @@
+count = 0  # 짝수 출력 횟수
+
 while True:
-    a = int(input())
-    if a%2==1:
-        continue
-    else:
-        print(a//2)
-        a = int(input())
-        if a%2==0:
-            print(a//2)
-        a = int(input())
-        if a%2==0:
-            print(a//2)
-        a = int(input())
-        if a%2==0:
-            print(a//2)
-        exit()
+    num = int(input())
+    
+    if num % 2 == 0:      # 짝수이면
+        print(num // 2)
+        count += 1
+    
+    if count == 3:        # 3번 출력하면 종료
+        break
