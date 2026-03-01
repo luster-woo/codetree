@@ -4,6 +4,6 @@ while True:
     a = int(input())
     if a>=30:
         print(f'{result/cnt:0.2f}')
-        break    
+        exit()    
     cnt+=1
     result+=a
