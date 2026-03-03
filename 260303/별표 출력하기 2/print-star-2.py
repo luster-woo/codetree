@@ -1,5 +1,5 @@
 n = int(input())
 for x in range(n):
-    for y in range(5-x):
+    for y in range(n-x):
         print("*", end=" ")
     print()
