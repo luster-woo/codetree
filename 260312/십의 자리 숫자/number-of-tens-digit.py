@@ -1,10 +1,17 @@
-arr = list(map(int,input().split()))
-arr.pop()
+# 1. 입력 받기 (0이 나올 때까지)
+arr = list(map(int, input().split()))
 
-for i in range(1,10):
+# 2. 마지막 0 제거 (문제에서 0은 제외하라고 했으므로)
+if arr[-1] == 0:
+    arr.pop()
+
+# 3. 1부터 9까지 십의 자리 숫자 개수 세기
+for i in range(1, 10):
     cnt = 0
     for x in arr:
-        if x>=10:
-            if (x//10)%10 == i:
-                cnt += 1
+        # 십의 자리를 구하는 가장 간단한 방법
+        # 100 미만이므로 x // 10을 하면 십의 자리가 나옵니다.
+        # 예: 14 // 10 = 1, 3 // 10 = 0
+        if (x // 10) == i:
+            cnt += 1
     print(f'{i} - {cnt}')
