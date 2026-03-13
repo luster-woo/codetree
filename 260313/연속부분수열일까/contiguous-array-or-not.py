@@ -3,7 +3,7 @@ arr =list(map(int,input().split()))
 temp =list(map(int,input().split()))
 i=j=0
 result = "No"
-while i<n-m:
+while i<n-m+1:
     if arr[i:i+m]==temp:
         result="Yes"
         break
