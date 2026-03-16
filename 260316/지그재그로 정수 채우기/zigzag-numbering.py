@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-cnt = 1
+cnt = 0
 arr = [[0]*m for _ in range(n)]
 
 for x in range(m):
