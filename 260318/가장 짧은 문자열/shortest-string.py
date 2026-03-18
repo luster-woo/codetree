@@ -4,4 +4,4 @@ for _ in range(3):
     temp = input()
     min_val = min(min_val, len(temp))
     max_val = max(max_val, len(temp))
-print(max_vla - min_val)
+print(max_val - min_val)
