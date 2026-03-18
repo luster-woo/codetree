@@ -6,4 +6,4 @@ elif len(a)<len(b):
     print(b,end=" ")
     print(len(b))
 else:
-    print("same")
+    print("sam")
