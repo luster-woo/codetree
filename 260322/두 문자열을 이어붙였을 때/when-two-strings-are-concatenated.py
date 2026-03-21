@@ -1,6 +1,8 @@
 arr = input()
 arr_1 = input()
-if len(arr)==len(arr_1):
+result = arr+arr_1
+result_1 = arr_1+arr
+if result == result_1:
     print("true")
 else:
     print("false")
