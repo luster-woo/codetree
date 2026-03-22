@@ -1,7 +1,7 @@
 arr = input()
 target = input()
 flag = False
-for i in range(len(arr)-len(target)):
+for i in range(len(arr)-len(target)+1):
     if arr[i:i+len(target)] == target:
         print(i)
         flag = True
