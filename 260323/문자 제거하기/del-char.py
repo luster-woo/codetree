@@ -9,4 +9,3 @@ while len(arr) > 1:
     else:
         arr.pop(len(arr)-1)
         print(''.join(arr))
-        break
