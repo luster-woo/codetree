@@ -7,5 +7,6 @@ while len(arr) > 1:
         arr.pop(n)
         print(''.join(arr))
     else:
-        print(arr[0])
+        arr.pop(len(arr)-1)
+        print(''.join(arr))
         break
