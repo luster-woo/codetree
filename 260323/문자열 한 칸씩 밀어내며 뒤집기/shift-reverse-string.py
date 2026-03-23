@@ -1,10 +1,13 @@
 import sys
 
-s = sys.stdin.readline().strip()
-q = int(sys.stdin.readline())
+input = sys.stdin.readline
+
+data = input().split()
+s = data[0]
+q = int(data[1])
 
 for _ in range(q):
-    cmd = int(sys.stdin.readline())
+    cmd = int(input())
     
     if cmd == 1:
         s = s[1:] + s[0]
