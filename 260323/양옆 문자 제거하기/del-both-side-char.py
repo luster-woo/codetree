@@ -1,3 +1,4 @@
-s = input()
-result = s[:2] + s[3:-2] + s[-1]
-print(result)
+arr = list(input())
+arr.pop(1)    # 앞에서 2번째
+arr.pop(-2)   # 뒤에서 2번째
+print(''.join(arr))
