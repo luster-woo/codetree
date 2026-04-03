@@ -2,25 +2,26 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-arr = [0]*2001  # 넉넉하게
-start = 1000    # 가운데 시작
+
+arr = [0] * 2001
+cur = 1000  # 0 위치를 가운데로
 
 for _ in range(n):
-    dist, dir = input().split()
-    dist = int(dist)
+    x, d = input().split()
+    x = int(x)
 
-    if dir == "R":
-        for x in range(1, dist+1):   # 1부터!
-            arr[start + x] += 1
-        start += dist
+    if d == 'R':
+        for i in range(cur, cur + x):
+            arr[i] += 1
+        cur += x
     else:
-        for x in range(1, dist+1):   # 1부터!
-            arr[start - x] += 1
-        start -= dist
+        for i in range(cur - x, cur):
+            arr[i] += 1
+        cur -= x
 
 cnt = 0
-for x in arr:
-    if x >= 2:
+for v in arr:
+    if v >= 2:
         cnt += 1
 
 print(cnt)
