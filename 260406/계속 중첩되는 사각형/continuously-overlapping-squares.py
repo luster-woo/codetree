@@ -9,6 +9,7 @@ for _ in range(n):
 visited = [[0]*201 for _ in range(201)]
 offset = 100
 for x in range(n):
+    a,b,c,d = x1[x],y1[x],x2[x],y2[x]
     if x%2==0:
         for x in range(a+offset,c+offset):
             for y in range(b+offset,d+offset):
