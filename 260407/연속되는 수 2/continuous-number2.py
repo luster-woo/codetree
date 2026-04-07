@@ -6,7 +6,7 @@ for _ in range(n):
 max_val = 0
 temp = 1
 for x in range(len(arr)-1):
-    if arr[x]!=arr[x-1]:
+    if arr[x]!=arr[x+1]:
         max_val = max(max_val,temp)
         temp = 1
     else:
