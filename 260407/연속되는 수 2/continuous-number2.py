@@ -11,4 +11,5 @@ for x in range(len(arr)-1):
         temp = 1
     else:
         temp+=1
+max_val = max(max_val, temp)
 print(max_val)
