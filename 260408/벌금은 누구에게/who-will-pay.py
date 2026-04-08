@@ -5,3 +5,4 @@ for x in range(n):
     if temp>=k:
         print(x+1)
         exit()
+print(-1)
