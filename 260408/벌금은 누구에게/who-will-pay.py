@@ -4,7 +4,7 @@ for x in range(m):
     temp = int(input())
     arr[temp-1]+=1
     if arr[temp-1]>=k:
-        print(x+1)
+        print(temp)
         exit()
 
 print(-1)
