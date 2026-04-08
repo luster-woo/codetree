@@ -4,12 +4,10 @@ n, m = map(int, input().split())
 a = deque()
 b = deque()
 
-# A 입력
 for _ in range(n):
     cnt, d = input().split()
     a.append([d, int(cnt)])
 
-# B 입력
 for _ in range(m):
     cnt, d = input().split()
     b.append([d, int(cnt)])
@@ -17,7 +15,7 @@ for _ in range(m):
 pos_a = 0
 pos_b = 0
 
-prev_same = True  # 처음은 같은 위치 (카운트 X)
+prev_same = True
 answer = 0
 
 while a or b:
@@ -31,7 +29,12 @@ while a or b:
     else:
         d2, c2 = 'R', 0
 
-    step = max(c1, c2)
+    # 👉 핵심 수정
+    step = min(c1, c2)
+
+    # 둘 다 없으면 종료
+    if step == 0:
+        step = max(c1, c2)
 
     for _ in range(step):
         if c1 > 0:
@@ -42,7 +45,6 @@ while a or b:
             pos_b += 1 if d2 == 'R' else -1
             c2 -= 1
 
-        # 현재 같은지 체크
         if pos_a == pos_b:
             if not prev_same:
                 answer += 1
