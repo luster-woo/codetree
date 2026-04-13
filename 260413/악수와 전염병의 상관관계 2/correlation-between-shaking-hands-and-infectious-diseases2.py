@@ -19,11 +19,16 @@ for _, x, y in arr:
 
     # 전염
     if x_inf and remain[x] > 0:
+        if infected[y] == 0:
+            remain[y] = k   # 🔥 추가
         infected[y] = 1
+
     if y_inf and remain[y] > 0:
+        if infected[x] == 0:
+            remain[x] = k   # 🔥 추가
         infected[x] = 1
 
-    # 횟수 감소 (핵심: remain > 0일 때만)
+    # 횟수 감소
     if x_inf and remain[x] > 0:
         remain[x] -= 1
     if y_inf and remain[y] > 0:
