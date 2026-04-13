@@ -3,37 +3,48 @@ n, k, p, t = map(int, input().split())
 arr = []
 for _ in range(t):
     time, x, y = map(int, input().split())
-    arr.append((time, x, y))
+    arr.append((time, x-1, y-1))
 
-# 시간순 정렬
-arr.sort(key=lambda x: x[0])
+arr.sort()
 
-infected = [0] * n
-remain = [0] * n
+infected = [0]*n
+remain = [0]*n
 
 infected[p-1] = 1
 remain[p-1] = k
 
-for _, x, y in arr:
-    x -= 1
-    y -= 1
+i = 0
+while i < t:
+    j = i
 
-    # 이전 상태 저장 (핵심)
-    x_inf = infected[x]
-    y_inf = infected[y]
+    # 같은 시간 묶기
+    while j < t and arr[j][0] == arr[i][0]:
+        j += 1
 
-    # 감염 전파
-    if x_inf and remain[x] > 0:
+    # 이번 시간에 일어나는 악수들
+    temp = []
+
+    for idx in range(i, j):
+        _, x, y = arr[idx]
+
+        if infected[x] and remain[x] > 0:
+            temp.append((x, y))
+        if infected[y] and remain[y] > 0:
+            temp.append((y, x))
+
+    # 감염 반영
+    for x, y in temp:
         infected[y] = 1
-    if y_inf and remain[y] > 0:
-        infected[x] = 1
 
-    # 횟수 감소 (감염자면 무조건)
-    if x_inf and remain[x] > 0:
-        remain[x] -= 1
-    if y_inf and remain[y] > 0:
-        remain[y] -= 1
+    # 횟수 감소
+    for idx in range(i, j):
+        _, x, y = arr[idx]
 
-# 출력
-for i in range(n):
-    print(infected[i], end="")
+        if infected[x] and remain[x] > 0:
+            remain[x] -= 1
+        if infected[y] and remain[y] > 0:
+            remain[y] -= 1
+
+    i = j
+
+print("".join(map(str, infected)))
