@@ -1,19 +1,39 @@
+n, k, p, t = map(int, input().split())
 
-n,k,p,t = map(int,input().split())
 arr = []
 for _ in range(t):
-    t, x, y = map(int, input().split())
-    arr.append((t, x, y))
-arr.sort(key = lambda x : x[0])
-people = [k]*n
-result = [0]*n
-result[p-1]=1
-for _,x,y in arr:
-    if people[x-1]>0 and result[x-1]==1:
-        result[y-1]=1
-        people[x-1]-=1
-    if people[y-1]>0 and result[y-1]==1:
-        people[y-1]-=1
-        result[x-1]=1
-for x in range(n):
-    print(result[x],end="")
+    time, x, y = map(int, input().split())
+    arr.append((time, x, y))
+
+# 시간순 정렬
+arr.sort(key=lambda x: x[0])
+
+infected = [0] * n
+remain = [0] * n
+
+infected[p-1] = 1
+remain[p-1] = k
+
+for _, x, y in arr:
+    x -= 1
+    y -= 1
+
+    # 이전 상태 저장 (핵심)
+    x_inf = infected[x]
+    y_inf = infected[y]
+
+    # 감염 전파
+    if x_inf and remain[x] > 0:
+        infected[y] = 1
+    if y_inf and remain[y] > 0:
+        infected[x] = 1
+
+    # 횟수 감소 (감염자면 무조건)
+    if x_inf and remain[x] > 0:
+        remain[x] -= 1
+    if y_inf and remain[y] > 0:
+        remain[y] -= 1
+
+# 출력
+for i in range(n):
+    print(infected[i], end="")
