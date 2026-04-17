@@ -15,10 +15,10 @@ elif d == "L":
 else:
     i = 3
 
-while t > -1:
+while t >= 0:
     ni = r + dx[i]
     nj = c + dy[i]
-    if not (0 <= ni < n and 0 <= nj < n):
+    if not (0 < ni <= n and 0 < nj <= n):
         i = (i + 2) % 4
         ni = r + dx[i]
         nj = c + dy[i]
