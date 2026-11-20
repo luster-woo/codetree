@@ -1,60 +1,49 @@
-# 🌲 Codetree Daily
+# codetree
 
-[![Solved](https://img.shields.io/badge/Solved-585%20problems-brightgreen?style=flat-square&logo=codetree)](https://www.codetree.ai)
-[![Days](https://img.shields.io/badge/Active-59%20days-blue?style=flat-square)](https://github.com/luster-woo/codetree)
-[![Language](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
-[![Platform](https://img.shields.io/badge/Platform-Codetree-2ea44f?style=flat-square)](https://www.codetree.ai)
+[코드트리](https://www.codetree.ai) Trail 커리큘럼을 순서대로 따라가며 푼 문제 기록입니다. SSAFY 1학기에 Python을 처음 배우면서 2026년 1월 31일부터 4월 17일까지 풀었습니다.
 
-> [Codetree](https://www.codetree.ai) Trail 커리큘럼을 따라 매일 알고리즘 문제를 풀고 기록하는 레포지토리입니다.  
-> **2026년 1월 31일 시작 → 4월 17일까지, 총 585문제 풀이 완료**
+## 기록
 
----
+| 항목 | 값 |
+|---|---|
+| 푼 문제 | 585문제 (코드 풀이 510문제, 개념 퀴즈 75문제) |
+| 푼 날 | 59일 |
+| 하루 평균 | 약 9.9문제 |
+| 가장 많이 푼 날 | 29문제 (2026-01-31) |
+| 언어 | Python |
 
-## 📊 통계
+개념 퀴즈는 코드 없이 답을 고르는 문제라 폴더에 문제 설명만 있습니다.
 
-| 항목 | 수치 |
-|:---|:---:|
-| 총 풀이 문제 수 | **585문제** |
-| 활동 일수 | **59일** |
-| 하루 평균 | **약 9.9문제** |
-| 최다 풀이 (하루) | **29문제** (2026-01-31) |
-| 사용 언어 | **Python** |
+월별
 
-### 월별 풀이 수
-
-| 월 | 문제 수 | 활동 일수 |
-|:---:|:---:|:---:|
+| 월 | 문제 수 | 푼 날 |
+|---|---|---|
 | 2026년 1월 | 29 | 1일 |
 | 2026년 2월 | 253 | 21일 |
 | 2026년 3월 | 251 | 27일 |
 | 2026년 4월 | 52 | 10일 |
 
----
+## 커리큘럼별
 
-## 🛤️ 커리큘럼 진행 현황
+| Trail | 주제 | 문제 수 |
+|---|---|---|
+| Trail 0 | 입출력, 조건문, 반복문, 1·2차원 배열, 문자열 | 88 |
+| Trail 1 | 출력, 입출력, 연산자, 조건문, 반복문, 문자열, 1·2차원 배열 | 381 |
+| Trail 2 | 함수, 재귀함수, 정렬, 시뮬레이션 | 115 |
 
-Codetree Trail 커리큘럼을 순서대로 이수하였습니다.
+커리큘럼 표시가 없는 문제가 1개 있어 합계는 584입니다.
 
-| Trail | 내용 | 풀이 비중 |
-|:---:|:---|:---:|
-| Trail 0 | 기본 입출력, 변수, 자료형, 연산자 | 58문제 |
-| Trail 1 | 조건문, 반복문, 1차원 배열, 문자열, 함수 | 350문제 |
-| Trail 2 | 함수 심화, 시뮬레이션, dx·dy 기법 | 57문제 |
+## 폴더 구조
 
----
-
-## 📁 레포 구조
-
-날짜 폴더(`YYMMDD`) 아래에 문제별 폴더가 있으며, 각 폴더에는 풀이 코드와 `README.md`가 포함되어 있습니다.
+날짜 폴더(`YYMMDD`) 아래에 문제별 폴더가 있습니다. 코드트리가 풀이를 자동으로 올려 주는 기능으로 쌓은 저장소입니다.
 
 ```
 codetree/
 ├── 260131/              # 2026-01-31
-│   ├── 문제명/
-│   │   ├── solution.py  # 풀이 코드
+│   ├── 문제 이름/
+│   │   ├── 문제-이름.py   # 풀이 코드
 │   │   └── README.md    # 문제 설명
-│   └── README.md        # 당일 학습 현황 요약
+│   └── README.md        # 그날 푼 문제 목록
 ├── 260201/
-│   └── ...
 └── ...
 ```
